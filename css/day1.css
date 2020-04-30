@@ -1,0 +1,50 @@
+body { margin: 0; padding: 0; display: flex; justify-content: center; display:-webkit-flex; width: 100%; height: 100%;}
+.basketball { width: 500px; height: 400px; border: 2px solid #b9b9b9; margin-top: 30px; position: relative; }
+.board { position: absolute; width: 150px; height: 105px; border: 2px solid #b9b9b9; top:65px; left: 20px; display: flex; align-items: center; justify-content: center; }
+.board.rotate {
+	transform: rotateY(55deg) rotateZ(-9deg) rotateX(-6deg);
+	webkit-transform: rotateY(55deg) rotateZ(-9deg) rotateX(-6deg);
+	moz-transform: rotateY(55deg) rotateZ(-9deg) rotateX(-6deg);
+	transform-style: preserve-3d;
+}
+.board .sub-board { width: 90px; height: 63px; border: 2px solid #b9b9b9; }
+.basket { width: 68px; height: 68px; border: 2px solid #b9b9b9; border-radius: 50%; position: absolute; top: 132px; left: 75px; transform: rotateX(-56deg) rotateY(5deg) rotateZ(-77deg); transform-style: preserve-3d; }
+.basket-half { width: 68px; height: 68px; border-left: 3px solid #b9b9b9; border-bottom: 3px; border-radius: 50%; position: absolute; top: 135px; left: 76px; transform: rotateX(-56deg) rotateY(5deg) rotateZ(-77deg); z-index: 4; transform-style: preserve-3d; }
+.ball {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	right: 10px;
+	bottom: 20px;
+	position: absolute;
+	z-index: 3;
+	animation: moveX 1.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-delay: 1s;
+	/*animation-fill-mode: forwards;*/
+}
+.ball .track {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%; 
+	background-color: #d4d4d4; 
+	animation: moveY 1.2s ;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.48, 2, 1, 2);
+	animation-delay: 1s;
+	/*animation-fill-mode: forwards;*/
+}
+
+@keyframes moveX {
+	0% {}
+	100% { transform: translateX(-358px) scale(0.8); }
+}
+
+@keyframes moveY {
+	0% {}
+	100% { transform: translateY(-140px) scale(0.8); }
+}
+
+
+

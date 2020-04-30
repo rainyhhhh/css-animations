@@ -1,2 +1,6 @@
 # css-animations
- Just for fun
+ Just for fun - challenge myself
+
+ 1. Slam Dunk
+
+ To be continued ...
